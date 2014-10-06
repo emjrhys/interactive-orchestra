@@ -30,7 +30,7 @@
                         $(this).css("top", "-=1px");
                     }
                 });
-                setTimeout(move, 12);
+                if (playing) setTimeout(move, 12);
             }
 
             $(document).ready(function() {
@@ -58,6 +58,14 @@
                     if (playing) {
                         playing = false;
                         document.getElementById('track').pause();
+                        $(this).css("background", "url(assets/play_small.gif) no-repeat center center");
+                    }
+                    else {
+                        playing = true;
+                        move();
+                        document.getElementById('track').play();
+                        $(this).css("background", "url(assets/stop.gif) no-repeat center center");
+
                     }
                 });
             });
