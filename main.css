@@ -107,7 +107,6 @@ body {
 }
 
 .inst {
-    top: 810px;
     position: absolute;
     cursor: pointer;
 }
@@ -121,8 +120,6 @@ body {
 
 .cello {
     background: url(assets/instruments/Cello.png) no-repeat center center;
-    top: 1000px;
-    left: 600px;
 
     height: 406px;
     width: 185px;
