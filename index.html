@@ -5,14 +5,14 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <audio id="track" src="assets/afterthestorm.mp3">
+        <!--<audio id="track" src="assets/afterthestorm.mp3">
             <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
-        </audio>
+    </audio>-->
         <div id="main-container">
             <div class="splash">
                 <button id="play"></button>
             </div>
-            <div id="stop"></div>
+            <button id="stop"></button>
             <div class="inst harp" title="harp"></div>
             <div class="inst cello" title="cello"></div>
         </div>
@@ -44,26 +44,26 @@
                 $("#play").click(function() {
                     if (!playing) {
                         $(".splash").addClass("playing");
-                        document.getElementById('track').play();
+                        //document.getElementById('track').play();
                         playing = true;
                         move();
 
                         setTimeout(function() {
                             $("#stop").addClass("playing");
-                        }, 500);
+                        }, 2000);
                     }
                 });
 
                 $("#stop").click(function() {
                     if (playing) {
                         playing = false;
-                        document.getElementById('track').pause();
+                        //document.getElementById('track').pause();
                         $(this).css("background", "url(assets/play_small.gif) no-repeat center center");
                     }
                     else {
                         playing = true;
                         move();
-                        document.getElementById('track').play();
+                        //document.getElementById('track').play();
                         $(this).css("background", "url(assets/stop.gif) no-repeat center center");
 
                     }

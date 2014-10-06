@@ -29,10 +29,15 @@ body {
     height: 400px;
     text-align: center;
 
-    -webkit-transition-duration: 500ms;
+    /*-webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     -o-transition-duration: 500ms;
-    transition-duration: 500ms;
+    transition-duration: 500ms;*/
+
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .splash.playing {
@@ -50,11 +55,12 @@ body {
     margin-top: 160px;
     width: 100px;
     height: 103px;
+    border-radius: 50px;
 
-    -webkit-transition-duration: 500ms;
-    -moz-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
 .splash button:hover {
@@ -71,8 +77,13 @@ body {
     position: absolute;
     bottom: 6px;
     right: 6px;
+    border: none;
+    outline: none;
+
+
     width: 80px;
     height: 82px;
+    border-radius: 40px;
     opacity: 0;
 
     -webkit-transition-duration: 2000ms;
@@ -99,12 +110,14 @@ body {
 .inst {
     top: 810px;
     position: absolute;
-    width: 300px;
-    height: 300px;
+    cursor: pointer;
 }
 
 .harp {
     background: url(assets/instruments/Harp.png) no-repeat center center;
+
+    height: 273px;
+    width: 269px;
 }
 
 .cello {
@@ -112,5 +125,6 @@ body {
     top: 1000px;
     left: 600px;
 
-    height: 500px;
+    height: 406px;
+    width: 185px;
 }
