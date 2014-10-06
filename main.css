@@ -109,6 +109,8 @@ body {
 .inst {
     position: absolute;
     cursor: pointer;
+
+    top: 100%;
 }
 
 .harp {
