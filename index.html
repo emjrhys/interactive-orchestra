@@ -45,7 +45,13 @@
                         .attr("class", "inst " + insts[n])
                         .attr("title", insts[n]);
                         
-                    $("."+insts[n]).css("left", Math.random()*window.innerWidth-300);
+                    $("."+insts[n]).css("left", Math.random()*window.innerWidth-300)
+                    .click(function() {
+                        var title = $(this).attr("title");
+
+                        if (title == selected) selected = "";
+                        else selected = title;
+                    });
                 }
                                     
                 $("#play").click(function() {
@@ -91,12 +97,6 @@
                 }
 
 
-                $(".inst").click(function() {
-                    var title = $(this).attr("title");
-
-                    if (title == selected) selected = "";
-                    else selected = title;
-                });
             });
         </script>
     </body>
