@@ -5,9 +5,9 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <audio id="track" src="assets/afterthestorm.mp3">
+        <!--<audio id="track" src="assets/afterthestorm.mp3">
             <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
-        </audio>
+        </audio>-->
         <div id="main-container">
             <div class="splash">
                 <button id="play"></button>
@@ -41,7 +41,8 @@
 
                 $("#play").click(function() {
                     $(".splash").addClass("playing");
-                    $("#track").play();
+                    $("#play").fadeOut();
+                    //$("#track").play();
                     move();
                 });
             });

@@ -57,10 +57,6 @@ body {
     cursor: pointer;
 }
 
-.splash.playing button {
-    opacity: 0;
-}
-
 .inst {
     top: 600px;
     position: absolute;
