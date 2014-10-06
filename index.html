@@ -53,6 +53,13 @@
                         }, 500);
                     }
                 });
+
+                $("#stop").click(function() {
+                    if (playing) {
+                        playing = false;
+                        document.getElementById('track').pause();
+                    }
+                });
             });
         </script>
     </body>
