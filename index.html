@@ -75,9 +75,9 @@
                 });
 
                 function move() {
-                    if (times[next] < currTime) {
-                        createInst(n);
-                        n++;
+                    if (next < times.length && times[next] < currTime) {
+                        createInst(next);
+                        next++;
                     }
 
                     $(".inst").each(function(index) {
