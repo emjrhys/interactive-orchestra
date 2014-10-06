@@ -43,9 +43,9 @@
                 function createInst(n) {
                     d3.select("#main-container").append("div")
                         .attr("class", "inst " + insts[n])
-                        .attr("title", insts[n])
-                        .style({"top":window.innerHeight,
-                            "left":Math.random()*window.innerWidth-300});
+                        .attr("title", insts[n]);
+                        
+                    $("."+insts[n]).css("left", Math.random()*window.innerWidth-300);
                 }
                                     
                 $("#play").click(function() {
