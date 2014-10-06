@@ -61,6 +61,11 @@ body {
     cursor: pointer;
 }
 
+.splash.playing button {
+    cursor: hand;
+    opacity: 0;
+}
+
 .inst {
     top: 600px;
     position: absolute;
