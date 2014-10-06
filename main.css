@@ -62,7 +62,7 @@ body {
 }
 
 .splash.playing button {
-    cursor: hand;
+    cursor: default;
     opacity: 0;
 }
 
