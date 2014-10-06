@@ -36,7 +36,8 @@ body {
 }
 
 .splash.playing {
-    margin: 0 auto;
+    bottom: auto;
+
     opacity: 0.5;
 }
 
