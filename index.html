@@ -5,12 +5,6 @@
         <link rel="stylesheet" type="text/css" href="main.css">
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
-        <script>
-            function getTime() {
-                    var music = $("#track");
-                    $("#duration").append((Math.floor(music.currentTime) + ' / ' + Math.floor(music.duration) + "<br/>"));
-                }
-        </script>
     </head>
     <body>
         <audio id="track" src="assets/afterthestorm.mp3" ontimeupdate="getTime();">
@@ -31,9 +25,12 @@
             $(document).ready(function() {
                 var selected = "";
                 var playing = false;
-
-
                 
+                function getTime() {
+                    var music = document.getElementById("track");
+                    $("#duration").append((Math.floor(music.currentTime) + ' / ' + Math.floor(music.duration) + "<br/>"));
+                }
+
                                     
                 $("#play").click(function() {
                     if (!playing) {
