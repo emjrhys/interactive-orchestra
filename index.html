@@ -12,6 +12,7 @@
             <div class="splash">
                 <button id="play"></button>
             </div>
+            <div id="stop"></div>
             <div class="inst harp" title="harp"></div>
             <div class="inst cello" title="cello"></div>
         </div>
@@ -46,6 +47,10 @@
                         document.getElementById('track').play();
                         move();
                         playing = true;
+
+                        setTimeout(function() {
+                            $("#stop").addClass("playing");
+                        }, 500);
                     }
                 });
             });

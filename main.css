@@ -66,6 +66,26 @@ body {
     opacity: 0;
 }
 
+#stop {
+    background: url(assets/stop.gif) no-repeat center center;
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 72px;
+    height: 70px;
+    opacity: 0;
+
+    -webkit-transition-duration: 2000ms;
+    -moz-transition-duration: 2000ms;
+    -o-transition-duration: 2000ms;
+    transition-duration: 2000ms;
+}
+
+#stop.playing {
+    opacity: 1;
+    cursor: pointer;
+}
+
 .inst {
     top: 810px;
     position: absolute;
