@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interactive Orchestra</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <audio id="track" src="assets/afterthestorm.mp3">
+            <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
+        </audio>
+        <div id="main-container">
+            <div class="splash">
+                <button id="play"></button>
+            </div>
+            <div class="inst harp" title="harp"></div>
+            <div class="inst cello" title="cello"></div>
+        </div>
+
+    
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+        <script>
+            var selected = "";
+
+            function move() {
+                $(".inst").each(function(index) {
+                    if ($(this).attr("title") != selected) {
+                        $(this).css("top", "-=1px");
+                    }
+                });
+                setTimeout(move, 12);
+            }
+
+            $(document).ready(function() {
+                $(".inst").click(function() {
+                    var title = $(this).attr("title");
+
+                    if (title == selected) selected = "";
+                    else selected = title;
+                });
+
+                $("#play").click(function() {
+                    $(".splash").addClass("playing");
+                    $("#track").play();
+                    move();
+                });
+            });
+        </script>
+    </body>
+</html>

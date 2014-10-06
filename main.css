@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main-container {
+    height: 100%;
+    width: 100%;
+}
+
+#main-container.paused {
+    //background-color: #ccc;
+}
+
+.splash {
+    margin: 100px auto 0;
+    background: url(assets/title.png) no-repeat center center;
+    background-position: top;
+    width: 800px;
+    height: 400px;
+    text-align: center;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.splash.playing {
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.splash button {
+    z-index: 10;
+    background: url(assets/play.gif) no-repeat center center;
+    border: none;
+    outline: none;
+
+    margin-top: 160px;
+    width: 100px;
+    height: 103px;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.splash button:hover {
+    cursor: pointer;
+}
+
+.splash.playing button {
+    opacity: 0;
+}
+
+.inst {
+    top: 600px;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+.harp {
+    background: url(assets/instruments/Harp.png) no-repeat center center;
+}
+
+.cello {
+    background: url(assets/instruments/Cello.png) no-repeat center center;
+    top: 1000px;
+    left: 600px;
+
+    height: 500px;
+}
