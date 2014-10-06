@@ -110,22 +110,13 @@ body {
     top: 810px;
     position: absolute;
     cursor: pointer;
-
-    -webkit-transition-duration: 100ms;
-    -moz-transition-duration: 100ms;
-    -o-transition-duration: 100ms;
-    transition-duration: 100ms;
 }
 
 .harp {
     background: url(assets/instruments/Harp.png) no-repeat center center;
 
-    height: 283px;
-    width: 279px;
-}
-
-.harp:hover {
-    background-size: 283px 279px;
+    height: 273px;
+    width: 269px;
 }
 
 .cello {
@@ -135,8 +126,4 @@ body {
 
     height: 406px;
     width: 185px;
-}
-
-.cello:hover {
-    background-size: 100% 100%;
 }
