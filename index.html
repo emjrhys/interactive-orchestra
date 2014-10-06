@@ -5,10 +5,11 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <audio id="track" src="assets/afterthestorm.mp3">
+        <audio id="track" src="assets/afterthestorm.mp3" ontimeupdate="getTime();">
             <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
     </audio>
         <div id="main-container">
+            <div id="duration"></div>
             <div class="splash">
                 <button id="play"></button>
             </div>
@@ -21,26 +22,17 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
         <script>
-            var selected = "";
-            var playing = false;
-
-            function move() {
-                $(".inst").each(function(index) {
-                    if ($(this).attr("title") != selected) {
-                        $(this).css("top", "-=1px");
-                    }
-                });
-                if (playing) setTimeout(move, 12);
-            }
-
             $(document).ready(function() {
-                $(".inst").click(function() {
-                    var title = $(this).attr("title");
+                var selected = "";
+                var playing = false;
 
-                    if (title == selected) selected = "";
-                    else selected = title;
-                });
 
+                function getTime() {
+                    var music = $("#track");
+                    $("#duration").append((Math.floor(music.currentTime) + ' / ' + Math.floor(music.duration + "<br/>"));
+                }
+
+                                    
                 $("#play").click(function() {
                     if (!playing) {
                         $(".splash").addClass("playing");
@@ -67,6 +59,23 @@
                         $(this).css("background", "url(assets/stop.gif) no-repeat center center");
 
                     }
+                });
+
+                function move() {
+                    $(".inst").each(function(index) {
+                        if ($(this).attr("title") != selected) {
+                            $(this).css("top", "-=1px");
+                        }
+                    });
+                    if (playing) setTimeout(move, 12);
+                }
+
+
+                $(".inst").click(function() {
+                    var title = $(this).attr("title");
+
+                    if (title == selected) selected = "";
+                    else selected = title;
                 });
             });
         </script>
