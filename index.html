@@ -6,8 +6,11 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
         <script>
+            var currTime = 0;
+
             function getTime() {
                     var music = document.getElementById("track");
+                    currTime = music.currentTime;
                     $("#duration").prepend(music.currentTime + ' / ' + music.duration + "<br/>");
             }
         </script>
@@ -31,8 +34,17 @@
             $(document).ready(function() {
                 var selected = "";
                 var playing = false;
+
+                var times = {12.2, 20.1};
+                var insts = {"harp", "cello"};
                 
+                var next = 0;
                 
+                function createInst(n) {
+                    d3.select("#main-container").append("div")
+                        .attr("class", "inst " + insts[n])
+                        .attr("title", insts[n]);
+                }
                                     
                 $("#play").click(function() {
                     if (!playing) {
@@ -63,6 +75,11 @@
                 });
 
                 function move() {
+                    if (times[next] < currTime) {
+                        createInst(n);
+                        n++;
+                    }
+
                     $(".inst").each(function(index) {
                         if ($(this).attr("title") != selected) {
                             $(this).css("top", "-=1px");
