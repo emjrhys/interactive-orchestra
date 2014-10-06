@@ -110,20 +110,33 @@ body {
     top: 810px;
     position: absolute;
     cursor: pointer;
+
+    -webkit-transition-duration: 100ms;
+    -moz-transition-duration: 100ms;
+    -o-transition-duration: 100ms;
+    transition-duration: 100ms;
 }
 
 .harp {
     background: url(assets/instruments/Harp.png) no-repeat center center;
 
-    height: 273px;
-    width: 269px;
+    height: 283px;
+    width: 279px;
+}
+
+.harp:hover {
+    background-size: 283px 279px;
 }
 
 .cello {
-    background: url(assets/violin.png) no-repeat center center;
+    background: url(assets/instru.png) no-repeat center center;
     top: 1000px;
     left: 600px;
 
     height: 406px;
     width: 185px;
+}
+
+.cello:hover {
+    background-size: 100% 100%;
 }
