@@ -102,6 +102,7 @@
                     }
 
                     $(".inst").each(function(index) {
+                            alert($(this).css("top"));
                         if ($(this).css("top") < -500) $(this).remove();
                         else if ($(this).attr("title") != selected) {
                             $(this).css("top", "-=1px");
