@@ -35,6 +35,7 @@
                 $("#track").ready(function() {
                     $("#play").css("display", "inline-block");
                 });
+
                 var selected = "";
                 var playing = false;
 
@@ -42,13 +43,22 @@
                 var insts = ["harp", "cello", "flute", "piccolo"];
                 
                 var next = 0;
+
+                var prevPos = -500;
                 
                 function createInst(n) {
                     d3.select("#main-container").append("div")
                         .attr("class", "inst " + insts[n])
                         .attr("title", insts[n]);
+
+                    var xpos = prevPos;
+                    
+                    while (xpos < prevPos + 350 && xpos > prevPos - 350)
+                        xpos = Math.random()*(window.innerWidth-300);
+
+                    prevPos = xpos;
                         
-                    $("."+insts[n]).css("left", Math.random()*(window.innerWidth-300))
+                    $("."+insts[n]).css("left", xpos)
                     .click(function() {
                         var title = $(this).attr("title");
 
