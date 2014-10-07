@@ -112,19 +112,36 @@ body {
     position: absolute;
     cursor: pointer;
 
+    background-repeat: no-repeat;
+    background-position: center center;
+
     top: 100%;
 }
 
 .harp {
-    background: url(assets/instruments/Harp.png) no-repeat center center;
+    background: url(assets/instruments/Harp.png);
 
     height: 273px;
     width: 269px;
 }
 
 .cello {
-    background: url(assets/instruments/Cello.png) no-repeat center center;
+    background: url(assets/instruments/Cello.png);
 
     height: 406px;
     width: 185px;
+}
+
+.flute {
+    background: url(assets/instruments/flute.png);
+
+    height: 413px;
+    width: 106px;
+}
+
+.piccolo {
+    background: url(assets/instruments/piccolo.png);
+
+    height: 389px;
+    width: 192px;
 }
