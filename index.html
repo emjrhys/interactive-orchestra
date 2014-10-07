@@ -11,7 +11,7 @@
             function getTime() {
                     var music = document.getElementById("track");
                     currTime = music.currentTime;
-                    $("#duration").prepend(music.currentTime + ' / ' + music.duration + "<br/>");
+                    //$("#duration").prepend(music.currentTime + ' / ' + music.duration + "<br/>");
             }
         </script>
     </head>
@@ -45,7 +45,7 @@
                         .attr("class", "inst " + insts[n])
                         .attr("title", insts[n]);
                         
-                    $("."+insts[n]).css("left", Math.random()*window.innerWidth-300)
+                    $("."+insts[n]).css("left", Math.random()*(window.innerWidth-300))
                     .click(function() {
                         var title = $(this).attr("title");
 
