@@ -72,7 +72,7 @@
 
                     prevPos = xpos;
 
-                    if (selected != "") $(this).fadeTo(200, .7);
+                    if (selected != "") $("."+insts[n]).fadeTo(200, .7);
                         
                     $("."+insts[n]).css("left", xpos)
                         .click(function() {
