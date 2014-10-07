@@ -32,6 +32,9 @@
     
         <script>
             $(document).ready(function() {
+                $("#track").ready(function() {
+                    $("#play").css("display", "block");
+                });
                 var selected = "";
                 var playing = false;
 
@@ -95,8 +98,6 @@
                     });
                     if (playing) setTimeout(move, 12);
                 }
-
-
             });
         </script>
     </body>
