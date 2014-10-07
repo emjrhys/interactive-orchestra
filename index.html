@@ -11,7 +11,7 @@
             function getTime() {
                     var music = document.getElementById("track");
                     currTime = music.currentTime;
-                    $("#duration").prepend(music.currentTime + ' / ' + music.duration + "<br/>");
+                    $("#duration").prepend(music.currentTime + "<br/>");
             }
         </script>
     </head>
@@ -102,7 +102,8 @@
                     }
 
                     $(".inst").each(function(index) {
-                        if ($(this).attr("title") != selected) {
+                        if ($(this).css("top") < -500) $(this).remove();
+                        else if ($(this).attr("title") != selected) {
                             $(this).css("top", "-=1px");
                         }
                     });
