@@ -71,6 +71,8 @@
                         xpos = Math.random()*(window.innerWidth-300);
 
                     prevPos = xpos;
+
+                    if (selected != "") $(this).fadeTo(200, .7);
                         
                     $("."+insts[n]).css("left", xpos)
                         .click(function() {
@@ -80,14 +82,14 @@
                                 selected = "";
                                 $(".inst").each(function() {
                                     if(selected != $(this).attr("title"))
-                                        $(this).fadeTo(500, 1);
+                                        $(this).fadeTo(200, 1);
                                 });
                             }
                             else {
                                 selected = title;
                                 $(".inst").each(function() {
                                     if(selected != $(this).attr("title"))
-                                        $(this).fadeTo(500, .7);
+                                        $(this).fadeTo(200, .7);
                                 });
                             }
                         });
