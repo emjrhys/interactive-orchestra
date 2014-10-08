@@ -6,6 +6,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
         <script>
+            var currTime = 0;
             function getTime() {
                 var music = document.getElementById("track");
                 currTime = music.currentTime;
@@ -14,7 +15,7 @@
     </head>
     <body>
         <audio id="track" src="assets/afterthestorm.mp3" ontimeupdate="getTime();">
-            <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
+            <p>Your browser does not support the audio element! Please use another browser for the full experience.</p>
         </audio>
         <div id="main-container">
             <div id="duration"></div>
@@ -28,6 +29,6 @@
 
             <button id="stop"></button>  
         </div>
-        <!--<script src="js/orchestra.js"></script>-->
+        <script src="js/orchestra.js"></script>
     </body>
 </html>

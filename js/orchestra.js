@@ -1,11 +1,4 @@
 $(document).ready(function() {
-    var currTime = 0;
-
-    function getTime() {
-        var music = document.getElementById("track");
-        currTime = music.currentTime;
-    }
-
     $("#track").ready(function() {
         $("#play").css("display", "inline-block");
     });
@@ -119,6 +112,7 @@ $(document).ready(function() {
 
 
             function move() {
+                console.log(currTime)
                 if (next < times.length && times[next] < currTime) {
                     createInst(next);
                     next++;
