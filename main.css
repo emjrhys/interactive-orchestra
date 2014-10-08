@@ -76,13 +76,16 @@ body {
     width: 667px;
 }
 
+.title div {
+    display: none;
+    opacity: 0;
+}
+
 .title .two {
     background: url(assets/title2.png) no-repeat center center;
 
     width: 667px;
     height: 105px;
-
-    display: none;
 
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
@@ -97,8 +100,6 @@ body {
     width: 667px;
     height: 46px;
 
-    display: none;
-
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     -o-transition-duration: 500ms;
@@ -107,7 +108,7 @@ body {
 }
 
 .title .playing {
-    display: block;
+    opacity: 1;
 }
 
 #stop {

@@ -44,6 +44,8 @@
                 var selected = "";
                 var playing = false;
 
+                var event_times = [1.5, 6, 7.2, 10];
+
                 var times = [12.2, 18.4, 24.1, 26.8, 37.5, 43.8, 50.6, 56.4,
                     64.9, 72.5, 78.9, 82.5, 90.2, 97.1, 108.1, 114.6, 120.8,
                     124.1, 127.8, 130.3, 135.8, 137.9, 143.1, 144.5, 153.3,
@@ -58,6 +60,7 @@
                 "triangle"];
                 
                 var next = 0;
+                var next_event = 0;
 
                 var prevPos = -500;
 
@@ -128,13 +131,28 @@
                     playPause();
                 });
 
+                function event(next) {
+                    switch(next) {
+                        case 0:
+                            $(".two").addClass("playing");
+                            break;
+                        case 1:
+                            $(".two").removeClass("playing");
+                        case 2:
+                            $(".three").addClass("playing");
+                        case 3:
+                            $(".three").removeClass("playing");
+                    }
+                }
+
+
                 function move() {
                     if (next < times.length && times[next] < currTime) {
                         createInst(next);
                         next++;
                     }
-                    if (1.5 < currTime) {
-                        $(".two").addClass("playing");
+                    if (next_event < event_times.length && event_times[next_event] < currTime) {
+                        event(next_event);
                     }
 
                     $(".inst").each(function(index) {
@@ -146,7 +164,8 @@
                     });
                     if (playing) setTimeout(move, 12);
                 }
-            });
+
+             });
         </script>
     </body>
 </html>
