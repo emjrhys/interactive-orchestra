@@ -24,8 +24,8 @@
                 <button id="play"></button>
             </div>
             <div class="title">
-                <div class="two"></div>
-                <div class="three"></div>
+                <div id="two"></div>
+                <div id="three"></div>
             </div>
 
             <button id="stop"></button>
@@ -133,14 +133,14 @@
                 function event(next) {
                     switch(next) {
                         case 0:
-                            $(".two").addClass("playing");
+                            $("#two").addClass("playing");
                             break;
                         case 1:
-                            $(".two").removeClass("playing");
+                            $("#two").removeClass("playing");
                         case 2:
-                            $(".three").addClass("playing");
+                            $("#three").addClass("playing");
                         case 3:
-                            $(".three").removeClass("playing");
+                            $("#three").removeClass("playing");
                     }
                 }
 

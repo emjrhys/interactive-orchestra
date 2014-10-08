@@ -78,32 +78,26 @@ body {
 
 .title div {
     opacity: 0;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+
 }
 
-.title .two {
+#two {
     background: url(assets/title2.png) no-repeat center center;
 
     width: 667px;
     height: 105px;
-
-    -webkit-transition-duration: 500ms;
-    -moz-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-
 }
 
-.title .three {
+#three {
     background: url(assets/title3.png) no-repeat center center;
 
     width: 667px;
     height: 46px;
-
-    -webkit-transition-duration: 500ms;
-    -moz-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-
 }
 
 .title .playing {
