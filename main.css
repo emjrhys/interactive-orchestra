@@ -79,11 +79,10 @@ body {
 .title div {
     opacity: 0;
 
-    -webkit-transition-duration: 500ms;
+    /*-webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     -o-transition-duration: 500ms;
-    transition-duration: 500ms;
-
+    transition-duration: 500ms;*/
 }
 
 #two {
