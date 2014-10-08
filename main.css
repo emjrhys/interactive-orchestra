@@ -79,6 +79,8 @@ body {
 .title div {
     opacity: 0;
 
+    position: absolute;
+
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     -o-transition-duration: 500ms;
