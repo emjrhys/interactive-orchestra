@@ -99,10 +99,6 @@ body {
     height: 46px;
 }
 
-.title .playing {
-    opacity: 1;
-}
-
 #stop {
     background: url(assets/stop.gif) no-repeat center center;
     position: absolute;

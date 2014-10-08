@@ -21,10 +21,10 @@ $(document).ready(function() {
             "french-horn", "tenor-sax", "trombone", "tuba", "trumpets", "singers-again",
             "triangle"];
 
-            var next = 0;
-            var next_event = 0;
+        var next = 0;
+        var next_event = 0;
 
-            var prevPos = -500;
+        var prevPos = -500;
 
             function playPause() {
                 if (playing) {
@@ -96,16 +96,16 @@ $(document).ready(function() {
             function event(next) {
                 switch(next) {
                     case 0:
-                        $("#two").addClass("playing");
+                        $("#two").fadeTo(500, 1);
                     break;
                     case 1:
-                        $("#two").removeClass("playing");
+                        $("#two").fadeTo(500, 0);
                     break;
                     case 2:
-                        $("#three").addClass("playing");
+                        $("#three").fadeTo(500, 1);
                     break;
                     case 3:
-                        $("#three").removeClass("playing");
+                        $("#three").fadeTo(500, 0);
                     break;
                 }
             }
