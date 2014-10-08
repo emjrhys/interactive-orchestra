@@ -151,8 +151,8 @@
                         next++;
                     }
                     if (next_event < event_times.length && event_times[next_event] < currTime) {
-                        console.log('calling event');
                         event(next_event);
+                        next_event++;
                     }
 
                     $(".inst").each(function(index) {
