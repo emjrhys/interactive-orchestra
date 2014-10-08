@@ -11,18 +11,24 @@
             function getTime() {
                     var music = document.getElementById("track");
                     currTime = music.currentTime;
+                    console.log(currTime);
             }
         </script>
     </head>
     <body>
         <audio id="track" src="assets/afterthestorm.mp3" ontimeupdate="getTime();">
             <p>Your browser does not support the audio element! Please use another browser for the full experience</p>
-    </audio>
+        </audio>
         <div id="main-container">
             <div id="duration"></div>
             <div class="splash">
                 <button id="play"></button>
             </div>
+            <div class="title">
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+
             <button id="stop"></button>
             
             
@@ -50,9 +56,6 @@
                 "gran-cassa", "timpani", "singers", "xylophone", "bassoons", "clarinet",
                 "french-horn", "tenor-sax", "trombone", "tuba", "trumpets", "singers-again",
                 "triangle"];
-
-                console.log(times.length);
-                console.log(insts.length);
                 
                 var next = 0;
 
@@ -112,6 +115,7 @@
                 $("#play").click(function() {
                     if (!playing) {
                         $(".splash").addClass("playing");
+                        $(".title").addClass("playing");
                         playPause();
                                                
                         setTimeout(function() {

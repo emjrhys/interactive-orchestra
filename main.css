@@ -74,6 +74,39 @@ body {
     opacity: 0;
 }
 
+.title {
+    position: absolute;
+    z-index: -2;
+
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+
+    height: 200px;
+    width: 667px;
+}
+
+.title .two {
+    background: url(assets/title2.png) no-repeat center center;
+
+    width: 667px;
+    height: 105px;
+
+    display: none;
+}
+
+.title .three {
+    background: url(assets/title3.png) no-repeat center center;
+
+    width: 667px;
+    height: 46px;
+
+    display: none;
+}
+
+.title .playing {
+    display: block;
+}
+
 #stop {
     background: url(assets/stop.gif) no-repeat center center;
     position: absolute;
@@ -188,8 +221,8 @@ body {
 .b3-organ {
     background: url(assets/instruments/B-3Oragan.png);
 
-    height: 481px;
-    width: 208px;
+    height: 208px;
+    width: 481px;
 }
 
 .celeste {
