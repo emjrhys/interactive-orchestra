@@ -96,13 +96,13 @@ $(document).ready(function() {
             function event(next) {
                 switch(next) {
                     case 0:
-                        $("#two").fadeTo(500, 1);
+                        $("#two").fadeTo(100, 1);
                     break;
                     case 1:
                         $("#two").fadeTo(500, 0);
                     break;
                     case 2:
-                        $("#three").fadeTo(500, 1);
+                        $("#three").fadeTo(200, 1);
                     break;
                     case 3:
                         $("#three").fadeTo(500, 0);
