@@ -118,7 +118,11 @@ body {
     top: 100%;
 }
 
-.harp {
+.inst.foreground {
+    z-index: 200;
+}
+
+.harp, .two-harps {
     background: url(assets/instruments/Harp.png);
 
     height: 273px;
@@ -146,4 +150,183 @@ body {
     width: 192px;
 }
 
+.electric-guitar {
+    background: url(assets/instruments/electric-guitar.png);
 
+    height: 448px;
+    width: 160px;
+}
+
+.uke {
+    background: url(assets/instruments/Uklele.png);
+
+    height: 485px;
+    width: 268px;
+}
+
+.classical-guitar {
+    background: url(assets/instruments/Classical-Guitar.png);
+
+    height: 474px;
+    width: 226px;
+}
+
+.banjo {
+    background: url(assets/instruments/banjo.png);
+
+    height: 481px;
+    width: 208px;
+}
+
+.woodblock {
+    background: url(assets/instruments/ThinWoodbLOCKS.png);
+
+    height: 302px;
+    width: 405px;
+}
+
+.b3-organ {
+    background: url(assets/instruments/B-3Oragan.png);
+
+    height: 481px;
+    width: 208px;
+}
+
+.celeste {
+    background: url(assets/instruments/Celesta.png);
+
+    height: 363px;
+    width: 320px;
+}
+
+.vibraphone {
+    background: url(assets/instruments/Bowed-Vibraphone.png);
+
+    height: 467px;
+    width: 351px;
+}
+
+.piano {
+    background: url(assets/instruments/Piano.png);
+
+    height: 447px;
+    width: 435px;
+}
+
+.violins {
+    background: url(assets/instruments/Violin.png);
+
+    height: 380px;
+    width: 225px;
+}
+
+.bass {
+}
+
+.tubular-bells {
+    background: url(assets/instruments/tubular-bells.png);
+
+    height: 300px;
+    width: 369px;
+}
+
+.glockenspiel {
+    background: url(assets/instruments/glockenspiel.png);
+
+    height: 322px;
+    width: 428px;
+}
+
+.cymbal {
+    background: url(assets/instruments/Ride-Cymball.png);
+
+    height: 374px;
+    width: 212px;
+}
+
+.piatti {
+    background: url(assets/instruments/Piatti.png);
+
+    height: 395px;
+    width: 432px;
+}
+
+.drums {
+    background: url(assets/instruments/Snare-Drums.png);
+
+    height: 315px;
+    width: 260px;
+}
+
+.gran-cassa {
+}
+
+.timpani {
+    background: url(assets/instruments/Timpani.png);
+
+    height: 521px;
+    width: 230px;
+}
+
+.xylophone {
+    background: url(assets/instruments/glockenspiel.png);
+
+    height: 322px;
+    width: 428px;
+}
+
+.bassoons {
+    background: url(assets/instruments/Bassoons.png);
+
+    height: 531px;
+    width: 229px;
+}
+
+.clarinet {
+    background: url(assets/instruments/Clarinet.png);
+
+    height: 379px;
+    width: 426px;
+}
+
+.french-horn {
+    background: url(assets/instruments/French-Horn.png);
+
+    height: 311px;
+    width: 485px;
+}
+
+.tenor-sax {
+    background: url(assets/instruments/Tenor-Sax.png);
+
+    height: 372px;
+    width: 384px;
+}
+
+.trombone {
+    background: url(assets/instruments/Trombone.png);
+
+    height: 377px;
+    width: 534px;
+}
+
+.tuba {
+    background: url(assets/instruments/Tuba.png);
+
+    height: 344px;
+    width: 346px;
+}
+
+.trumpets {
+    background: url(assets/instruments/trumpets.png);
+
+    height: 199px;
+    width: 564px;
+}
+
+.triangle {
+    background: url(assets/instruments/Triangle.png);
+
+    height: 400px;
+    width: 329px;
+}
