@@ -11,7 +11,6 @@
             function getTime() {
                     var music = document.getElementById("track");
                     currTime = music.currentTime;
-                    console.log(currTime);
             }
         </script>
     </head>
@@ -152,6 +151,7 @@
                         next++;
                     }
                     if (next_event < event_times.length && event_times[next_event] < currTime) {
+                        console.log('calling event');
                         event(next_event);
                     }
 
