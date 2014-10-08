@@ -14,10 +14,6 @@ body {
     width: 100%;
 }
 
-#main-container.paused {
-    //background-color: #ccc;
-}
-
 .splash {
     margin: auto;
     position: absolute;
@@ -28,11 +24,6 @@ body {
     width: 800px;
     height: 400px;
     text-align: center;
-
-    /*-webkit-transition-duration: 500ms;
-    -moz-transition-duration: 500ms;
-    -o-transition-duration: 500ms;
-    transition-duration: 500ms;*/
 
     -webkit-transition: all 500ms ease-in-out;
     -moz-transition: all 500ms ease-in-out;
@@ -92,6 +83,12 @@ body {
     height: 105px;
 
     display: none;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+
 }
 
 .title .three {
@@ -101,6 +98,12 @@ body {
     height: 46px;
 
     display: none;
+
+    -webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+
 }
 
 .title .playing {

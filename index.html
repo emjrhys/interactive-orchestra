@@ -133,6 +133,9 @@
                         createInst(next);
                         next++;
                     }
+                    if (1.5 < currTime) {
+                        $(".two").addClass("playing");
+                    }
 
                     $(".inst").each(function(index) {
                         var top = $(this).css("top");
