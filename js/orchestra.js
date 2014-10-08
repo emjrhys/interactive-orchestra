@@ -125,7 +125,7 @@ $(document).ready(function() {
 
                 $(".inst").each(function(index) {
                     var top = $(this).css("top");
-                    if (parseInt(top.substring(0, top.length-2)) < -400) $(this).remove();
+                    if (parseInt(top.substring(0, top.length-2)) < -500) $(this).remove();
                     else if ($(this).attr("title") != selected) {
                         $(this).css("top", "-=1px");
                     }
