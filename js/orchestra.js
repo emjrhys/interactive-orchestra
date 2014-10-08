@@ -99,7 +99,7 @@ $(document).ready(function() {
                         $("#two").fadeTo(100, 1);
                     break;
                     case 1:
-                        $("#two").fadeTo(500, 0);
+                        $("#two").fadeTo(200, 0);
                     break;
                     case 2:
                         $("#three").fadeTo(200, 1);
