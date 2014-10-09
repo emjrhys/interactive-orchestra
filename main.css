@@ -512,4 +512,6 @@ body {
 #detail.triangle {
     background: url(assets/detail/triangle_detail.png);
 }
-
+#detail {
+    background-size: 500px 500px;
+}
