@@ -68,7 +68,10 @@ $(document).ready(function() {
                     $("#arrow").fadeTo(200, 0);
                     $("#detail").fadeTo(200, 0);
 
-                    $("#detail").removeClass(title);
+                    setTimeout(function() {
+                        $("#detail").removeClass(title);
+                    }, 200);
+
                 }
                 else {
                     selected = title;
