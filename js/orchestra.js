@@ -88,7 +88,7 @@ $(document).ready(function() {
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#detail").css("top", (p.top+h) + "px");
+                        $("#detail").css("top", (p.top+h-40) + "px");
                         flip += 2;
                     }
                     else {
@@ -110,6 +110,8 @@ $(document).ready(function() {
                             $("#arrow").addClass("flipBoth");
                             break;
                     }
+
+                    $("#detail").css("background", "url: (assets/detail/" + title + "_detail.png)");
 
                     $("#arrow").fadeTo(200, 1);
 
