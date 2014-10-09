@@ -197,6 +197,7 @@ body {
 .inst {
     position: absolute;
     cursor: pointer;
+    z-index: 100;
 
     background-repeat: no-repeat;
     background-position: center center;
