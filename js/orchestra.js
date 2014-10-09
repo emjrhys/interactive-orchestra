@@ -64,6 +64,8 @@ $(document).ready(function() {
                         if(selected != $(this).attr("title"))
                             $(this).fadeTo(200, 1);
                     });
+
+                    $("#arrow").fadeTo(200, 0);
                 }
                 else {
                     selected = title;
@@ -90,7 +92,7 @@ $(document).ready(function() {
                         $("#arrow").removeClass("flipV")
                     }
 
-                    
+                    $("#arrow").fadeTo(200, 1);
 
                     $(".inst").each(function() {
                         if(selected != $(this).attr("title"))
