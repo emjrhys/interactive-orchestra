@@ -74,14 +74,14 @@ $(document).ready(function() {
                     var p = $(this).position();
 
                     if (p.left+w/2 < window.innerWidth/2) 
-                        $("arrow").css("left", (p.left+w) + "px");
+                        $("#arrow").css("left", (p.left+w) + "px");
                     else
-                        $("arrow").css("left", (p.left-$("arrow").width()) + "px");
+                        $("#arrow").css("left", (p.left-$("#arrow").width()) + "px");
 
                     if (p.top+h/2 < window.innerHeight/2)
-                        $("arrow").css("top", (p.top-$("arrow").height()) + "px");
+                        $("#arrow").css("top", (p.top-$("#arrow").height()) + "px");
                     else
-                        $("arrow").css("top", (p.top+h) + "px");
+                        $("#arrow").css("top", (p.top+h) + "px");
                     
 
                     $(".inst").each(function() {
