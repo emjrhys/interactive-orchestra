@@ -79,21 +79,21 @@ $(document).ready(function() {
 
                     if (p.left+w/2 < window.innerWidth/2) {
                         $("#arrow").css("left", (p.left+w-40) + "px");
-                        $("#detail").css("left", (p.left+w+40) + "px");
+                        $("#detail").css("left", (p.left+w+100) + "px");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#detail").css("left", (p.left-$("#arrow").width()-500) + "px");
+                        $("#detail").css("left", (p.left-$("#arrow").width()-300) + "px");
                         flip += 1;
                     }
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#detail").css("top", (p.top+h+40) + "px");
+                        $("#detail").css("top", (p.top+h+100) + "px");
                         flip += 2;
                     }
                     else {
                         $("#arrow").css("top", (p.top-$("#arrow").height()+40) + "px");
-                        $("#detail").css("top", (p.top-$("#arrow").height()-400) + "px");
+                        $("#detail").css("top", (p.top-$("#arrow").height()-200) + "px");
                     }
 
                     $("#arrow").removeClass("flipH").removeClass("flipV").removeClass("flipBoth");
