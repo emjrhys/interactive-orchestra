@@ -75,21 +75,36 @@ $(document).ready(function() {
 
                     var p = $(this).position();
 
+                    var flip = 0;
+
                     if (p.left+w/2 < window.innerWidth/2) {
                         $("#arrow").css("left", (p.left+w-40) + "px");
-                        $("#arrow").removeClass("flipH");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#arrow").addClass("flipH");
+                        flip += 1;
                     }
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#arrow").addClass("flipV");
+                        flip += 2;
                     }
                     else {
                         $("#arrow").css("top", (p.top-$("#arrow").height()+40) + "px");
-                        $("#arrow").removeClass("flipV")
+                    }
+
+                    $("#arrow").removeClass("flipH").removeClass("flipV").removeClass("flipBoth");
+
+
+                    switch(flip) {
+                        case(1):
+                            $("#arrow").addClass("flipH");
+                            break;
+                        case(2):
+                            $("#arrow").addClass("flipV");
+                            break;
+                        case(3):
+                            $("#arrow").addClass("flipBoth");
+                            break;
                     }
 
                     $("#arrow").fadeTo(200, 1);

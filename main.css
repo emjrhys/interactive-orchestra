@@ -168,6 +168,16 @@ body {
     -ms-filter: "FlipV";
 }
 
+#arrow.flipBoth {
+    -moz-transform: scaleY(-1) scaleX(-1);
+    -o-transform: scaleY(-1) scaleX(-1);
+    -webkit-transform: scaleY(-1) scaleX(-1);
+    transform: scaleY(-1) scaleX(-1);
+    filter: FlipV FlipH;
+    -ms-filter: "FlipV FlipH";
+
+}
+
 .inst {
     position: absolute;
     cursor: pointer;
