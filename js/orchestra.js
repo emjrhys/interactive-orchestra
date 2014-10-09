@@ -79,9 +79,10 @@ $(document).ready(function() {
                         $("#arrow").css("left", (p.left-$("#arrow").width()) + "px");
 
                     if (p.top+h/2 < window.innerHeight/2)
-                        $("#arrow").css("top", (p.top-$("#arrow").height()) + "px");
-                    else
                         $("#arrow").css("top", (p.top+h) + "px");
+                    else
+                        $("#arrow").css("top", (p.top-$("#arrow").height()) + "px");
+
                     
 
                     $(".inst").each(function() {
