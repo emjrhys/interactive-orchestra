@@ -67,6 +67,13 @@ $(document).ready(function() {
                 }
                 else {
                     selected = title;
+                    
+                    var w = $(this).css("width");
+                    w = parseInt(w.substring(0, w.length-2));
+                    console.log(w);
+                    var h = $(this).css("height");
+                    h = parseInt(h.substring(0, h.length-2));
+
                     $(".inst").each(function() {
                         if(selected != $(this).attr("title"))
                             $(this).fadeTo(200, .7);
@@ -112,14 +119,12 @@ $(document).ready(function() {
 
 
     function move() {
-        console.log(currTime)
         if (next < times.length && times[next] < currTime) {
             createInst(next);
             next++;
         }
         if (next_event < event_times.length && event_times[next_event] < currTime) {
             event(next_event);
-            console.log("calling event" + next_event);
             next_event++;
         }
 
