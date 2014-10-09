@@ -139,6 +139,7 @@ body {
 
 #arrow {
     position: absolute;
+    z-index: 20;
 
     background: url(assets/arrow.gif) no-repeat center center;
     background-size: 160px;
