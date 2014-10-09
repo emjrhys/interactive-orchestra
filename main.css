@@ -142,7 +142,7 @@ body {
     z-index: 20;
 
     background: url(assets/arrow.gif) no-repeat center center;
-    background-size: 160px;
+    background-size: 160px 160px;;
 
     height: 160px;
     width: 160px;
@@ -186,7 +186,7 @@ body {
 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 500px;
+    background-size: 500px 500px;
 
     background: url(assets/detail/harp_detail.png);
 }
