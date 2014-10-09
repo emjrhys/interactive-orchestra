@@ -82,13 +82,13 @@ $(document).ready(function() {
                         $("#detail").css("left", (p.left+w+100) + "px");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#detail").css("left", (p.left-$("#arrow").width()-300) + "px");
+                        $("#detail").css("left", (p.left-$("#arrow").width()-400) + "px");
                         flip += 1;
                     }
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#detail").css("top", (p.top+h+100) + "px");
+                        $("#detail").css("top", (p.top+h+60) + "px");
                         flip += 2;
                     }
                     else {
