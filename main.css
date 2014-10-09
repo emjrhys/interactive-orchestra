@@ -137,6 +137,13 @@ body {
     transition-duration: 100ms;
 }
 
+#arrow {
+    background: url(assets/arrow.gif) no-repeat center center;
+
+    height: 230px;
+    width: 230px;
+}
+
 .inst {
     position: absolute;
     cursor: pointer;

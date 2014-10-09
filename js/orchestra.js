@@ -13,125 +13,124 @@ $(document).ready(function() {
         124.1, 127.8, 130.3, 135.8, 137.9, 143.1, 144.5, 153.3,
         156.3, 162.4, 165.3, 171.3, 177.2, 182.5, 188.5, 194.6,
         210.2];
-        var insts = ["harp", "cello", "flute", "piccolo", "electric-guitar",
-            "uke", "classical-guitar", "banjo", "woodblock", "two-harps",
-            "b3-organ", "celeste", "vibraphone", "piano", "violins", "bass",
-            "tubular-bells", "glockenspiel", "cymbal", "piatti", "drums",
-            "gran-cassa", "timpani", "singers", "xylophone", "bassoons", "clarinet",
-            "french-horn", "tenor-sax", "trombone", "tuba", "trumpets", "singers-again",
-            "triangle"];
+    var insts = ["harp", "cello", "flute", "piccolo", "electric-guitar",
+        "uke", "classical-guitar", "banjo", "woodblock", "two-harps",
+        "b3-organ", "celeste", "vibraphone", "piano", "violins", "bass",
+        "tubular-bells", "glockenspiel", "cymbal", "piatti", "drums",
+        "gran-cassa", "timpani", "singers", "xylophone", "bassoons", "clarinet",
+        "french-horn", "tenor-sax", "trombone", "tuba", "trumpets", "singers-again",
+        "triangle"];
 
-        var next = 0;
-        var next_event = 0;
+    var next = 0;
+    var next_event = 0;
 
-        var prevPos = -500;
+    var prevPos = -500;
 
-            function playPause() {
-                if (playing) {
-                    playing = false;
-                    document.getElementById('track').pause();
-                    $("#stop").css("background", "url(assets/play_small.gif) no-repeat center center");
+    function playPause() {
+        if (playing) {
+            playing = false;
+            document.getElementById('track').pause();
+            $("#stop").css("background", "url(assets/play_small.gif) no-repeat center center");
+        }
+        else {
+            playing = true;
+            move();
+            document.getElementById('track').play();
+            $("#stop").css("background", "url(assets/stop.gif) no-repeat center center");
+        }
+    }
+
+    function createInst(n) {
+        d3.select("#main-container").append("div")
+            .attr("class", "inst " + insts[n])
+            .attr("title", insts[n]);
+
+        var xpos = prevPos;
+
+        while (xpos < prevPos + 350 && xpos > prevPos - 350)
+            xpos = Math.random()*(window.innerWidth-300);
+
+        prevPos = xpos;
+
+        if (selected != "") $("."+insts[n]).fadeTo(200, .7);
+
+        $("."+insts[n]).css("left", xpos)
+            .click(function() {
+                var title = $(this).attr("title");
+
+                if (title == selected) {
+                    selected = "";
+                    $(".inst").each(function() {
+                        if(selected != $(this).attr("title"))
+                            $(this).fadeTo(200, 1);
+                    });
                 }
                 else {
-                    playing = true;
-                    move();
-                    document.getElementById('track').play();
-                    $("#stop").css("background", "url(assets/stop.gif) no-repeat center center");
-                }
-            }
-
-            function createInst(n) {
-                d3.select("#main-container").append("div")
-                .attr("class", "inst " + insts[n])
-                .attr("title", insts[n]);
-
-                var xpos = prevPos;
-
-                while (xpos < prevPos + 350 && xpos > prevPos - 350)
-                    xpos = Math.random()*(window.innerWidth-300);
-
-                prevPos = xpos;
-
-                if (selected != "") $("."+insts[n]).fadeTo(200, .7);
-
-                $("."+insts[n]).css("left", xpos)
-                .click(function() {
-                    var title = $(this).attr("title");
-
-                    if (title == selected) {
-                        selected = "";
-                        $(".inst").each(function() {
-                            if(selected != $(this).attr("title"))
-                                $(this).fadeTo(200, 1);
-                        });
-                    }
-                    else {
-                        selected = title;
-                        $(".inst").each(function() {
-                            if(selected != $(this).attr("title"))
-                                $(this).fadeTo(200, .7);
-                        });
-                        $(this).fadeTo(200, 1);
-                        $(this).addClass("foreground");
-                    }
-                });
-            }
-
-            $("#play").click(function() {
-                if (!playing) {
-                    $(".splash").addClass("playing");
-                    $(".title").addClass("playing");
-                    playPause();
-
-                    setTimeout(function() {
-                        $("#stop").addClass("playing");
-                    }, 12500);
+                    selected = title;
+                    $(".inst").each(function() {
+                        if(selected != $(this).attr("title"))
+                            $(this).fadeTo(200, .7);
+                    });
+                    $(this).fadeTo(200, 1);
+                    $(this).addClass("foreground");
                 }
             });
+    }
 
-            $("#stop").click(function() {
-                playPause();
-            });
+    $("#play").click(function() {
+        if (!playing) {
+            $(".splash").addClass("playing");
+            $(".title").addClass("playing");
+            playPause();
 
-            function event(next) {
-                switch(next) {
-                    case 0:
-                        $("#two").fadeTo(100, 1);
-                    break;
-                    case 1:
-                        $("#two").fadeTo(200, 0);
-                    break;
-                    case 2:
-                        $("#three").fadeTo(100, 1);
-                    break;
-                    case 3:
-                        $("#three").fadeTo(200, 0);
-                    break;
-                }
+            setTimeout(function() {
+                $("#stop").addClass("playing");
+            }, 12500);
+        }
+    });
+
+    $("#stop").click(function() {
+        playPause();
+    });
+
+    function event(next) {
+        switch(next) {
+            case 0:
+                $("#two").fadeTo(100, 1);
+                break;
+            case 1:
+                $("#two").fadeTo(200, 0);
+                break;
+            case 2:
+                $("#three").fadeTo(100, 1);
+                break;
+            case 3:
+                $("#three").fadeTo(200, 0);
+                break;
+        }
+    }
+
+
+    function move() {
+        console.log(currTime)
+        if (next < times.length && times[next] < currTime) {
+            createInst(next);
+            next++;
+        }
+        if (next_event < event_times.length && event_times[next_event] < currTime) {
+            event(next_event);
+            console.log("calling event" + next_event);
+            next_event++;
+        }
+
+        $(".inst").each(function(index) {
+            var top = $(this).css("top");
+            if (parseInt(top.substring(0, top.length-2)) < -500) $(this).remove();
+            else if ($(this).attr("title") != selected) {
+                $(this).css("top", "-=1px");
             }
-
-
-            function move() {
-                console.log(currTime)
-                if (next < times.length && times[next] < currTime) {
-                    createInst(next);
-                    next++;
-                }
-                if (next_event < event_times.length && event_times[next_event] < currTime) {
-                    event(next_event);
-                    console.log("calling event" + next_event);
-                    next_event++;
-                }
-
-                $(".inst").each(function(index) {
-                    var top = $(this).css("top");
-                    if (parseInt(top.substring(0, top.length-2)) < -500) $(this).remove();
-                    else if ($(this).attr("title") != selected) {
-                        $(this).css("top", "-=1px");
-                    }
-                });
-                if (playing) setTimeout(move, 12);
-            }
-
+        });
+        if (playing) setTimeout(move, 12);
+    }
 });
 
