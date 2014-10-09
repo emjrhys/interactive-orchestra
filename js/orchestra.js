@@ -99,7 +99,7 @@ $(document).ready(function() {
                     }
                     else {
                         $("#arrow").css("top", (p.top-$("#arrow").height()+40) + "px");
-                        $("#detail").css("top", (p.top-$("#arrow").height()-200) + "px");
+                        $("#detail").css("top", (p.top-$("#arrow").height()-100) + "px");
                     }
 
                     $("#arrow").removeClass("flipH").removeClass("flipV").removeClass("flipBoth");
