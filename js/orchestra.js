@@ -68,11 +68,21 @@ $(document).ready(function() {
                 else {
                     selected = title;
                     
-                    var w = $(this).css("width");
-                    w = parseInt(w.substring(0, w.length-2));
-                    console.log(w);
-                    var h = $(this).css("height");
-                    h = parseInt(h.substring(0, h.length-2));
+                    var w = $(this).width();
+                    var h = $(this).height();
+
+                    var p = $(this).position();
+
+                    if (p.left+w/2 < window.innerWidth/2) 
+                        $("arrow").css("left", (p.left+w) + "px");
+                    else
+                        $("arrow").css("left", (p.left-$("arrow").width()) + "px");
+
+                    if (p.top+h/2 < window.innerHeight/2)
+                        $("arrow").css("top", (p.top-$("arrow").height()) + "px");
+                    else
+                        $("arrow").css("top", (p.top+h) + "px");
+                    
 
                     $(".inst").each(function() {
                         if(selected != $(this).attr("title"))
@@ -129,8 +139,7 @@ $(document).ready(function() {
         }
 
         $(".inst").each(function(index) {
-            var top = $(this).css("top");
-            if (parseInt(top.substring(0, top.length-2)) < -500) $(this).remove();
+            if ($(this).position().top < -500) $(this).remove();
             else if ($(this).attr("title") != selected) {
                 $(this).css("top", "-=1px");
             }

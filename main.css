@@ -138,11 +138,15 @@ body {
 }
 
 #arrow {
+    position: absolute;
+
     background: url(assets/arrow.gif) no-repeat center center;
     background-size: 160px;
 
     height: 160px;
     width: 160px;
+
+    //opacity: 0;
 }
 
 .inst {
