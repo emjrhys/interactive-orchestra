@@ -57,6 +57,7 @@ $(document).ready(function() {
         $("."+insts[n]).css("left", xpos)
             .click(function() {
                 var title = $(this).attr("title");
+                $("#detail").removeClass();
 
                 if (title == selected) {
                     selected = "";
@@ -67,10 +68,6 @@ $(document).ready(function() {
 
                     $("#arrow").fadeTo(200, 0);
                     $("#detail").fadeTo(200, 0);
-
-                    setTimeout(function() {
-                        $("#detail").removeClass(title);
-                    }, 200);
 
                 }
                 else {
