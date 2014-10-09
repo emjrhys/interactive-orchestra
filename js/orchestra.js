@@ -66,6 +66,9 @@ $(document).ready(function() {
                     });
 
                     $("#arrow").fadeTo(200, 0);
+                    $("#detail").fadeTo(200, 0);
+
+                    $("#detail").removeClass(title);
                 }
                 else {
                     selected = title;
@@ -111,9 +114,10 @@ $(document).ready(function() {
                             break;
                     }
 
-                    $("#detail").css("background-image", "url: (assets/detail/" + title + "_detail.png)");
+                    $("#detail").addClass(title);
 
                     $("#arrow").fadeTo(200, 1);
+                    $("#detail").fadeTo(200, 1);
 
                     $(".inst").each(function() {
                         if(selected != $(this).attr("title"))
