@@ -154,7 +154,7 @@ $(document).ready(function() {
                 $(this).css("top", "-=2px");
             }
         });
-        if (playing) setTimeout(move, 15);
+        if (playing) setTimeout(move, 18);
     }
 });
 
