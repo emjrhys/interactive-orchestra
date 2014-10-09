@@ -180,7 +180,8 @@ body {
 
 #detail {
     position: absolute;
-    z-index: 21;
+    z-index: 210;
+    pointer-events: none;
 
     width: 500px;
     height: 500px;
