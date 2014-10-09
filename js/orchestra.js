@@ -131,6 +131,8 @@ $(document).ready(function() {
     }
 
     $("#play").click(function() {
+        console.log(document.getElementById("track").duration);
+
         if (!playing) {
             $(".splash").addClass("playing");
             $(".title").addClass("playing");
