@@ -97,6 +97,10 @@
 }
 
 .bass {
+    background: url(assets/instruments/Double-Bass.png);
+
+    height: 380px;
+    width: 225px;
 }
 
 .tubular-bells {
@@ -135,6 +139,10 @@
 }
 
 .gran-cassa {
+    background: url(assets/instruments/Gran-Cassa.png);
+
+    height: 245px;
+    width: 210px;
 }
 
 .timpani {
@@ -145,10 +153,10 @@
 }
 
 .xylophone {
-    background: url(assets/instruments/glockenspiel.png);
+    background: url(assets/instruments/xylophone.png);
 
-    height: 322px;
-    width: 428px;
+    height: 343px;
+    width: 360px;
 }
 
 .bassoons {
