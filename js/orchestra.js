@@ -75,19 +75,19 @@ $(document).ready(function() {
 
                     if (p.left+w/2 < window.innerWidth/2) {
                         $("#arrow").css("left", (p.left+w-40) + "px");
-                        $("#arrow").removeClass("flipH");
+                        $("#arrow").addClass("flipH");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#arrow").addClass("flipH");
+                        $("#arrow").removeClass("flipH");
                     }
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#arrow").removeClass("flipV");
+                        $("#arrow").addClass("flipV");
                     }
                     else {
                         $("#arrow").css("top", (p.top-$("#arrow").height()+40) + "px");
-                        $("#arrow").addClass("flipV")
+                        $("#arrow").removeClass("flipV")
                     }
 
                     
