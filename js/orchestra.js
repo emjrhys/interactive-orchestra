@@ -88,7 +88,7 @@ $(document).ready(function() {
 
                     if (p.top+h/2 < window.innerHeight/2) {
                         $("#arrow").css("top", (p.top+h-40) + "px");
-                        $("#detail").css("top", (p.top+h-40) + "px");
+                        $("#detail").css("top", (p.top+h-100) + "px");
                         flip += 2;
                     }
                     else {
@@ -111,7 +111,7 @@ $(document).ready(function() {
                             break;
                     }
 
-                    $("#detail").css("background", "url: (assets/detail/" + title + "_detail.png)");
+                    $("#detail").css("background-image", "url: (assets/detail/" + title + "_detail.png)");
 
                     $("#arrow").fadeTo(200, 1);
 
