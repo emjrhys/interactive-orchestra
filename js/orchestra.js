@@ -148,7 +148,7 @@ $(document).ready(function() {
             next_event++;
         }
 
-        $(".insts").each(function(index) {
+        $(".inst").each(function(index) {
             if ($(this).position().top < -500) $(this).remove();
             else if ($(this).attr("title") != selected) {
                 $(this).css("top", "-=2px");
