@@ -160,6 +160,9 @@ $(document).ready(function() {
             case 3:
                 $("#three").fadeTo(200, 0);
                 break;
+            case 4:
+                $("#thanks").fadeTo(100, 1);
+                break;
         }
     }
 

@@ -103,6 +103,13 @@ body {
     margin-top: 40px;
 }
 
+#thanks {
+    background: url(assets/thankyou.png) no-repeat center center;
+
+    width: 667px;
+    height: 105px;
+}
+
 #stop {
     background: url(assets/stop.gif) no-repeat center center;
     position: absolute;

@@ -8,6 +8,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
         <script>
             var currTime = 0;
+            console.log(document.getElementById("track").duration);
             function getTime() {
                 var music = document.getElementById("track");
                 currTime = music.currentTime;
@@ -26,6 +27,7 @@
             <div class="title">
                 <div id="two"></div>
                 <div id="three"></div>
+                <div id="thanks"></div>
             </div>
             
             <div id="arrow"></div>
