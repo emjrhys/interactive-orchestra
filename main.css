@@ -139,9 +139,10 @@ body {
 
 #arrow {
     background: url(assets/arrow.gif) no-repeat center center;
+    background-size: 200px;
 
-    height: 230px;
-    width: 230px;
+    height: 200px;
+    width: 200px;
 }
 
 .inst {
