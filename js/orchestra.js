@@ -57,7 +57,6 @@ $(document).ready(function() {
         $("."+insts[n]).css("left", xpos)
             .click(function() {
                 var title = $(this).attr("title");
-                $("#detail").removeClass();
 
                 if (title == selected) {
                     selected = "";
@@ -71,6 +70,8 @@ $(document).ready(function() {
 
                 }
                 else {
+                    $("#detail").removeClass();
+
                     selected = title;
                     
                     var w = $(this).width();
