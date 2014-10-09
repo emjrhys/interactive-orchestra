@@ -148,10 +148,10 @@ $(document).ready(function() {
             next_event++;
         }
 
-        $(".inst").each(function(index) {
+        $(".insts").each(function(index) {
             if ($(this).position().top < -500) $(this).remove();
             else if ($(this).attr("title") != selected) {
-                $(this).css("top", "-=1px");
+                $(this).css("top", "-=2px");
             }
         });
         if (playing) setTimeout(move, 12);
