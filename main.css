@@ -195,14 +195,13 @@ body {
     z-index: 210;
     pointer-events: none;
 
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
 
     background: url(assets/detail/harp_detail.png);
 
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 500px 500px;
 
     opacity: 0;
 }
