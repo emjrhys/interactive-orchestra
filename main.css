@@ -110,6 +110,8 @@ body {
 
 #thanks {
     background: url(assets/thankyou.png) no-repeat center center;
+    background-size: contain;
+    -moz-background-size: contain;
 
     width: 667px;
     height: 105px;
