@@ -82,8 +82,6 @@ body {
 
     position: absolute;
 
-    background-size: contain;
-
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
     -o-transition-duration: 500ms;
@@ -92,6 +90,7 @@ body {
 
 #two {
     background: url(assets/title2.png) no-repeat center center;
+    background-size: contain;
 
     width: 667px;
     height: 105px;
@@ -99,6 +98,7 @@ body {
 
 #three {
     background: url(assets/title3.png) no-repeat center center;
+    background-size: contain;
 
     width: 667px;
     height: 46px;
