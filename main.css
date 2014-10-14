@@ -74,12 +74,16 @@ body {
 
     height: 200px;
     width: 667px;
+
+    background-size: contain;
 }
 
 .title div {
     opacity: 0;
 
     position: absolute;
+
+    background-size: contain;
 
     -webkit-transition-duration: 500ms;
     -moz-transition-duration: 500ms;
