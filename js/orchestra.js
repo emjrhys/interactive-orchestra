@@ -86,7 +86,7 @@ $(document).ready(function() {
                         $("#detail").css("left", (p.left+w+130) + "px");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#detail").css("left", (p.left-$("#arrow").width()-250) + "px");
+                        $("#detail").css("left", (p.left-$("#arrow").width()-300) + "px");
                         flip += 1;
                     }
 
