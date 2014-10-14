@@ -195,8 +195,8 @@ body {
     z-index: 210;
     pointer-events: none;
 
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 
     background: url(assets/detail/harp_detail.png);
 
