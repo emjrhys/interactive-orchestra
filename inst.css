@@ -316,4 +316,5 @@
 #detail {
     background-size: contain !important;
     -moz-background-size: contain !important;
+    background-repeat: no-repeat !important;
 }
