@@ -83,10 +83,10 @@ $(document).ready(function() {
 
                     if (p.left+w/2 < window.innerWidth/2) {
                         $("#arrow").css("left", (p.left+w-40) + "px");
-                        $("#detail").css("left", (p.left+w+100) + "px");
+                        $("#detail").css("left", (p.left+w+130) + "px");
                     } else {
                         $("#arrow").css("left", (p.left-$("#arrow").width()+40) + "px");
-                        $("#detail").css("left", (p.left-$("#arrow").width()-400) + "px");
+                        $("#detail").css("left", (p.left-$("#arrow").width()-250) + "px");
                         flip += 1;
                     }
 
