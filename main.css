@@ -21,6 +21,7 @@ body {
 
     background: url(assets/title.png) no-repeat center center;
     background-position: top;
+    background-size: contain;
     width: 800px;
     height: 400px;
     text-align: center;
@@ -74,8 +75,6 @@ body {
 
     height: 200px;
     width: 667px;
-
-    background-size: contain;
 }
 
 .title div {
