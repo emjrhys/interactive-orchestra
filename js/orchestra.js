@@ -6,7 +6,7 @@ $(document).ready(function() {
     var selected = "";
     var playing = false;
 
-    var event_times = [1.5, 6, 6.8, 10, 219];
+    var event_times = [1.5, 6, 6.8, 10, 220];
 
     var times = [12.2, 18.4, 24.1, 26.8, 37.5, 43.8, 50.6, 56.4,
         64.9, 72.5, 78.9, 82.5, 90.2, 97.1, 108.1, 114.6, 120.8,
@@ -164,6 +164,7 @@ $(document).ready(function() {
                 break;
             case 4:
                 $("#thanks").fadeTo(100, 1);
+                $("#stop").removeClass("playing");
                 break;
         }
     }
